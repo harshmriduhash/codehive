@@ -1,0 +1,28 @@
+.scroll-container {
+  max-height: 400px;
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #808080;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 4px;
+}
+
+.peer-video {
+  margin-bottom: 10px;
+}
+
+.themecenter {
+  justify-content: center;
+}
