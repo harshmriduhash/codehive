@@ -37,7 +37,11 @@ export default function Contact() {
     e.preventDefault();
 
     // Validate fields and alert if any are empty or invalid
-    if (!isFieldValid("name") || !isFieldValid("email") || !isFieldValid("message")) {
+    if (
+      !isFieldValid("name") ||
+      !isFieldValid("email") ||
+      !isFieldValid("message")
+    ) {
       alert("All fields are required and must be valid.");
       return;
     }
@@ -55,7 +59,9 @@ export default function Contact() {
       });
 
       if (!response.ok) {
-        throw new Error((await response.json()).message || "Failed to send message.");
+        throw new Error(
+          (await response.json()).message || "Failed to send message."
+        );
       }
       alert("Message sent successfully!");
 
@@ -78,7 +84,10 @@ export default function Contact() {
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="relative">
-                  <label htmlFor="name" className="block font-spacegrotesksemibold text-gray-100 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block font-spacegrotesksemibold text-gray-100 mb-2"
+                  >
                     Your Name
                   </label>
                   <input
@@ -92,7 +101,10 @@ export default function Contact() {
                   />
                 </div>
                 <div className="relative">
-                  <label htmlFor="email" className="block font-spacegrotesksemibold text-gray-100 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block font-spacegrotesksemibold text-gray-100 mb-2"
+                  >
                     Email Address
                   </label>
                   <input
@@ -106,7 +118,10 @@ export default function Contact() {
                   />
                 </div>
                 <div className="relative">
-                  <label htmlFor="text" className="block font-spacegrotesksemibold text-gray-100 mb-2">
+                  <label
+                    htmlFor="text"
+                    className="block font-spacegrotesksemibold text-gray-100 mb-2"
+                  >
                     Your Message
                   </label>
                   <textarea
@@ -129,7 +144,14 @@ export default function Contact() {
           </div>
           <div className="lg:max-w-xl w-full h-[600px] flex items-center lg:pt-32 justify-center">
             <div className="z-10">
-              <Phone filled={isFieldValid("name") && isFieldValid("email") && isFieldValid("message")} formdata={formData} />
+              <Phone
+                filled={
+                  isFieldValid("name") &&
+                  isFieldValid("email") &&
+                  isFieldValid("message")
+                }
+                formdata={formData}
+              />
             </div>
           </div>
         </div>
