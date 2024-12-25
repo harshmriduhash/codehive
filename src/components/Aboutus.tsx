@@ -59,7 +59,7 @@ const Aboutus = () => {
               translateZ={20}
               as={Link}
               className="px-4 py-2 rounded-xl bg-white text-xs font-bold"
-              href="https://github.com/Khagesh2409"
+              href="https://github.com/harshmriduhash"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ const Aboutus = () => {
               translateZ={20}
               as={Link}
               className="px-4 py-2 rounded-xl bg-white text-xs font-bold"
-              href="https://github.com/abhaydixit07"
+              href="https://github.com/harshmriduhash"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
