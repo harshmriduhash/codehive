@@ -56,8 +56,7 @@ const defaultCodeTemplates: Record<string, string> = {
     "// Write your TypeScript code here\nconsole.log('Hello, World!');",
 };
 
-
-export default function CollaborativeIDE2({ userName }: any)  {
+export default function CollaborativeIDE2({ userName }: any) {
   const [code, setCode] = useState(
     defaultCodeTemplates[languageOptions[0].value]
   );
@@ -801,7 +800,9 @@ export default function CollaborativeIDE2({ userName }: any)  {
                     <span>Genie</span>
                   </button>
                 </div>
-                {isGenieModalOpen && <GenieModal onClose={toggleGenieModal} code={code} />}
+                {isGenieModalOpen && (
+                  <GenieModal onClose={toggleGenieModal} code={code} />
+                )}
                 <div className="hidden lg:flex items-center gap-2">
                   <label className="text-white">Font Size:</label>
                   <input
@@ -887,4 +888,3 @@ export default function CollaborativeIDE2({ userName }: any)  {
     </div>
   );
 }
-
